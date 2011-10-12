@@ -1,0 +1,25 @@
+<local:MainViewModel 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"       
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:EventTracker.Phone">
+    
+    <local:MainViewModel.IsDataLoaded>True</local:MainViewModel.IsDataLoaded>
+    <local:MainViewModel.CategoriesViewModel>
+        <local:EventCategoriesViewModel PageTitle="categories" IsDataLoaded="True" IsCategoriesLoading="False">
+            <local:EventCategoriesViewModel.Categories>
+                <local:EventCategory Id="One" Name="Category one" />
+                <local:EventCategory Id="Two" Name="Category two" />
+                <local:EventCategory Id="Three" Name="Category three" />
+                <local:EventCategory Id="Four" Name="Category four" />
+                <local:EventCategory Id="Five" Name="Category five" />
+                <local:EventCategory Id="Six" Name="Category six" />
+                <local:EventCategory Id="Seven" Name="Category seven" />
+                <local:EventCategory Id="Eight" Name="Category eight" />
+                <local:EventCategory Id="Nine" Name="Category nine" />
+                <local:EventCategory Id="Ten" Name="Category ten" />
+                <local:EventCategory Id="Eleven" Name="Category eleven" />
+            </local:EventCategoriesViewModel.Categories>
+        </local:EventCategoriesViewModel>
+    </local:MainViewModel.CategoriesViewModel>
+    
+</local:MainViewModel>

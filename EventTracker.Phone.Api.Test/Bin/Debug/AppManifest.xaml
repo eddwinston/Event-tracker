@@ -1,0 +1,9 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="EventTracker.Phone.Api.Test" EntryPointType="EventTracker.Phone.Api.Test.App" RuntimeVersion="3.0.40624.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="EventTracker.Phone.Api.Test" Source="EventTracker.Phone.Api.Test.dll" />
+    <AssemblyPart x:Name="EventTracker.Phone.Api" Source="EventTracker.Phone.Api.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.WP7" Source="GalaSoft.MvvmLight.WP7.dll" />
+    <AssemblyPart x:Name="Microsoft.Silverlight.Testing" Source="Microsoft.Silverlight.Testing.dll" />
+    <AssemblyPart x:Name="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight" Source="Microsoft.VisualStudio.QualityTools.UnitTesting.Silverlight.dll" />
+  </Deployment.Parts>
+</Deployment>

@@ -1,0 +1,10 @@
+bin/*
+Bin/*
+obj/*
+obj
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so

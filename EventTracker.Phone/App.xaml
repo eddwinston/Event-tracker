@@ -1,0 +1,83 @@
+﻿<Application 
+    x:Class="EventTracker.Phone.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    xmlns:viewModel="clr-namespace:EventTracker.Phone"
+    xmlns:delay="clr-namespace:Delay;assembly=PhonePerformance">
+
+    <!--Application Resources-->
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/DefaultStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+                
+        <!-- Featured events item template -->
+
+        <DataTemplate x:Name="FeaturedEventsItemTemplate">
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,20">
+                <Grid Background="Wheat"
+                      Margin="15,0,0,0"
+                      Width="105"
+                      Height="105">
+                    <Image CacheMode="BitmapCache"
+                           delay:LowProfileImageLoader.UriSource="{Binding Image.Medium.Url}"
+                           Width="100"
+                           Height="100" />
+                </Grid>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="{Binding Title}" 
+                               TextWrapping="Wrap" 
+                               Foreground="{StaticResource PanoramaForegroundBrush}" 
+                               Style="{StaticResource PhoneTextLargeStyle}"/>
+
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock  Margin="12,5,5,5" 
+                                    Text="Venue:" 
+                                    Foreground="{StaticResource PanoramaForegroundBrush}"
+                                    Style="{StaticResource PhoneTextNormalStyle}"/>
+                        <TextBlock  Margin="0,5,0,5" 
+                                    Text="{Binding CityName}" 
+                                    Foreground="{StaticResource PanoramaForegroundBrush}"
+                                    Style="{StaticResource PhoneTextAccentStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Margin="12,5,5,5" 
+                                    Text="Start: " 
+                                    Style="{StaticResource PhoneTextNormalStyle}"/>
+                        <TextBlock Margin="0,5,0,5" 
+                                   Text="{Binding StartTime, ConverterParameter=\{0:d MMMM yyyy\}, Converter={StaticResource StringFormatConverter}}" 
+                                   TextWrapping="Wrap" 
+                                   Foreground="{StaticResource PanoramaForegroundBrush}"
+                                   Style="{StaticResource PhoneTextAccentStyle}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Visibility="{Binding StopTimeIsAvailable, Converter={StaticResource VisibilityConverter}}">
+                        <TextBlock  Margin="12,5,5,20" 
+                                    Text="End: " 
+                                    Style="{StaticResource PhoneTextNormalStyle}"/>
+                        <TextBlock Margin="0,5,0,20" 
+                                   Text="{Binding StopTime, ConverterParameter=\{0:d MMMM yyyy\}, Converter={StaticResource StringFormatConverter}}" 
+                                   TextWrapping="Wrap" 
+                                   Foreground="{StaticResource PanoramaForegroundBrush}"
+                                   Style="{StaticResource PhoneTextAccentStyle}"/>
+                    </StackPanel>
+
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+        
+    </Application.Resources>
+
+    <Application.ApplicationLifetimeObjects>
+        <!--Required object that handles lifetime events for the application-->
+        <shell:PhoneApplicationService 
+            Launching="Application_Launching" Closing="Application_Closing" 
+            Activated="Application_Activated" Deactivated="Application_Deactivated"/>
+    </Application.ApplicationLifetimeObjects>
+
+</Application>

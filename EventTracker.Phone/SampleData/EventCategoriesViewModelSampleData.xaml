@@ -1,0 +1,14 @@
+<EventTracker_Phone:EventCategoriesViewModel xmlns:EventTracker_Phone="clr-namespace:EventTracker.Phone" IsInDesignMode="True" IsInDesignModeStatic="False" IsDataLoaded="False" IsCategoriesLoading="True" PageTitle="Inceptos sed dictum arcu diam">
+    <EventTracker_Phone:EventCategoriesViewModel.Categories>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True" Id="Aliquam class nam sed" Name="Maecenas vestibulum dis"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Integer aenean" Name="Cras mauris"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Curae est duis donec" Name="Praesent curabitur etiam fusce phasellus"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True" Id="Adipiscing accumsan" Name="Nullam quisque bibendum parturient"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Consequat dictumst eleifend" Name="Lorem vivamus"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Aptent vestibulum convallis" Name="Hac vestibulum nunc"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True" Id="Leo dignissim" Name="Elementum mus"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Morbi nec facilisi" Name="Nulla aliquam amet proin"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Facilisis faucibus habitant auctor augue" Name="Fermentum ante fringilla"/>
+        <EventTracker_Phone:EventCategory IsInDesignMode="True"  Id="Adipiscing aliquet congue" Name="Habitasse non cursus hendrerit per"/>
+    </EventTracker_Phone:EventCategoriesViewModel.Categories>
+</EventTracker_Phone:EventCategoriesViewModel>
